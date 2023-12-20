@@ -17,8 +17,8 @@ user_request = input("What can I help you with today? ")
 completion = client.chat.completions.create(
     model="gpt-3.5-turbo",
     messages=[
-        {"role": "system", "content": "You are a college level science professor with PHD"},
-        {"role": "user", "content": "How do ocean waves work, why are some regions of the world have larger waves?"}
+        {"role": "system", "content": "You have every PHD available and read ever book known"},
+        {"role": "user", "content": user_request}
     ]
 )
 
@@ -48,4 +48,4 @@ result_dict = {
 }
 json_response = json.dumps(result_dict, indent=2)
 
-print(json_response)
+print(json_response.choices.message.content)

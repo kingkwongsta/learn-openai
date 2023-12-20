@@ -12,6 +12,8 @@ if not api_key:
 
 client = OpenAI(api_key=api_key)
 
+user_request = input("What can I help you with today? ")
+
 completion = client.chat.completions.create(
     model="gpt-3.5-turbo",
     messages=[

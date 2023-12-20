@@ -48,4 +48,4 @@ result_dict = {
 }
 json_response = json.dumps(result_dict, indent=2)
 
-print(json_response.choices.message.content)
+print(result_dict['choices'][0]['message']['content'])
